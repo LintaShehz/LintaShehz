@@ -1,29 +1,22 @@
-name: Generate readme-aura SVGs
-
+name: Generate README
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+    paths: ['readme.source.md']
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Generate README
+        uses: collectioneur/readme-aura@main
         with:
-          node-version: '20'
-
-      - name: Generate SVGs and Build README
-        run: npx readme-aura build
-
-      - name: Commit and Push Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "docs: automated readme-aura update [skip ci]"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
