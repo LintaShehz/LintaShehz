@@ -1,19 +1,55 @@
-```aura width=800 height=200
-<div style={{ display: 'flex', position: 'relative', width: 800, height: 200, background: '#0d1117', borderRadius: 18, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-  <svg width="800" height="200" viewBox="0 0 800 200" style={{ position: 'absolute', top: 0, left: 0 }}>
-    <rect x="2" y="2" width="796" height="196" rx="16" fill="none" stroke="#1f2937" strokeWidth="2" />
-    <rect x="2" y="2" width="796" height="196" rx="16" fill="none" stroke="#22d3ee" strokeWidth="3" strokeLinecap="round" pathLength="100" strokeDasharray="8 92">
-      <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5s" repeatCount="indefinite" />
+```aura width=800 height=260
+<div style={{ display: 'flex', position: 'relative', width: 800, height: 260, background: '#0a0a12', borderRadius: 18, overflow: 'hidden', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+  <svg width="800" height="260" viewBox="0 0 800 260" style={{ position: 'absolute', top: 0, left: 0 }}>
+    <defs>
+      <radialGradient id="gPurple" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="#a855f7" stopOpacity="0.95" />
+        <stop offset="100%" stopColor="#a855f7" stopOpacity="0" />
+      </radialGradient>
+      <radialGradient id="gBlue" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
+        <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+      </radialGradient>
+      <radialGradient id="gCyan" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.7" />
+        <stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
+      </radialGradient>
+    </defs>
+    <ellipse cx="640" cy="60" rx="190" ry="16" fill="url(#gPurple)">
+      <animate attributeName="cx" values="580;700;580" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="7s" repeatCount="indefinite" />
+    </ellipse>
+    <ellipse cx="380" cy="215" rx="170" ry="26" fill="url(#gBlue)">
+      <animate attributeName="cx" values="300;460;300" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="9s" repeatCount="indefinite" />
+    </ellipse>
+    <ellipse cx="110" cy="120" rx="110" ry="80" fill="url(#gCyan)">
+      <animate attributeName="opacity" values="0.35;0.85;0.35" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="rx" values="95;125;95" dur="5s" repeatCount="indefinite" />
+    </ellipse>
+    <ellipse cx="730" cy="225" rx="120" ry="40" fill="url(#gPurple)">
+      <animate attributeName="cx" values="690;770;690" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="8s" repeatCount="indefinite" />
+    </ellipse>
+    <rect x="2" y="2" width="796" height="256" rx="16" fill="none" stroke="#1f2937" strokeWidth="2" />
+    <rect x="2" y="2" width="796" height="256" rx="16" fill="none" stroke="#22d3ee" strokeWidth="3" strokeLinecap="round" pathLength="100" strokeDasharray="8 92">
+      <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="6s" repeatCount="indefinite" />
     </rect>
-    <rect x="2" y="2" width="796" height="196" rx="16" fill="none" stroke="#a78bfa" strokeWidth="3" strokeLinecap="round" pathLength="100" strokeDasharray="8 92">
-      <animate attributeName="stroke-dashoffset" from="-50" to="-150" dur="5s" repeatCount="indefinite" />
+    <rect x="2" y="2" width="796" height="256" rx="16" fill="none" stroke="#a78bfa" strokeWidth="3" strokeLinecap="round" pathLength="100" strokeDasharray="8 92">
+      <animate attributeName="stroke-dashoffset" from="-50" to="-150" dur="6s" repeatCount="indefinite" />
     </rect>
-    <path d="M2 34 V2 H34 M766 2 H798 V34 M798 166 V198 H766 M34 198 H2 V166" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round">
+    <path d="M2 34 V2 H34 M766 2 H798 V34 M798 226 V258 H766 M34 258 H2 V226" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round">
       <animate attributeName="opacity" values="0.25;1;0.25" dur="2.5s" repeatCount="indefinite" />
     </path>
   </svg>
   <div style={{ display: 'flex', color: '#f5f5f5', fontSize: 46, fontWeight: 700 }}>Hi, I'm LintaShehz</div>
-  <div style={{ display: 'flex', color: '#22d3ee', fontSize: 20, marginTop: 12 }}>DAE CIT Student | Learning C++ | Building in public</div>
+  <div style={{ display: 'flex', color: '#9ca3af', fontSize: 20, marginTop: 10 }}>DAE CIT Student | Learning C++ | Building in public</div>
+  <div style={{ display: 'flex', marginTop: 26 }}>
+    <div style={{ display: 'flex', color: '#facc15', fontSize: 16, padding: '7px 18px', borderRadius: 999, border: '1px solid #facc15', background: 'rgba(250,204,21,0.08)', marginLeft: 6, marginRight: 6 }}>Python</div>
+    <div style={{ display: 'flex', color: '#60a5fa', fontSize: 16, padding: '7px 18px', borderRadius: 999, border: '1px solid #60a5fa', background: 'rgba(96,165,250,0.08)', marginLeft: 6, marginRight: 6 }}>C++</div>
+    <div style={{ display: 'flex', color: '#fb923c', fontSize: 16, padding: '7px 18px', borderRadius: 999, border: '1px solid #fb923c', background: 'rgba(251,146,60,0.08)', marginLeft: 6, marginRight: 6 }}>HTML/CSS</div>
+    <div style={{ display: 'flex', color: '#a78bfa', fontSize: 16, padding: '7px 18px', borderRadius: 999, border: '1px solid #a78bfa', background: 'rgba(167,139,250,0.08)', marginLeft: 6, marginRight: 6 }}>C</div>
+  </div>
 </div>
 ```
 
@@ -99,4 +135,5 @@
   </svg>
   <div style={{ display: 'flex', color: '#9ca3af', fontSize: 16 }}>Thanks for visiting. More projects coming soon.</div>
 </div>
+```
 ```
