@@ -4,7 +4,7 @@
 <img src="./.github/assets/readme-aura-component-1-0cd86b99.svg" width="256" height="150" /><img src="./.github/assets/readme-aura-component-2-9eacb56d.svg" width="256" height="150" /><img src="./.github/assets/readme-aura-component-3-ebe8f3a1.svg" width="256" height="150" />
 </p>
 
-## Find me here 
+## Find me here
 
 * GitHub: [@LintaShehz](https://github.com/LintaShehz)
 * Add your other links here (Instagram, YouTube, LinkedIn)
