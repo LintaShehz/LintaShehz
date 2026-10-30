@@ -1,20 +1,17 @@
 ```aura width=800 height=260
-<div style={{ display: 'flex', position: 'relative', width: 800, height: 260, background: '#0a0a12', borderRadius: 18, overflow: 'hidden', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-  <svg width="800" height="260" viewBox="0 0 800 260" style={{ position: 'absolute', top: 0, left: 0 }}>
-    <defs>
-      <radialGradient id="gPurple" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#a855f7" stopOpacity="0.95" />
-        <stop offset="100%" stopColor="#a855f7" stopOpacity="0" />
-      </radialGradient>
-      <radialGradient id="gBlue" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-        <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-      </radialGradient>
-      <radialGradient id="gCyan" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.7" />
-        <stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
-      </radialGradient>
-    </defs>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    import HudFrame from "./HudFrame";
+
+export default function App() {
+  return (
+    <HudFrame
+      text="PLAYER ONE"
+      subtext="Level 12 · Focus streak 9 days"
+      image="/cat.png"
+      imageSide="left"
+    />
+  );
+}</defs>
     <ellipse cx="640" cy="60" rx="190" ry="16" fill="url(#gPurple)">
       <animate attributeName="cx" values="580;700;580" dur="7s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.5;1;0.5" dur="7s" repeatCount="indefinite" />
